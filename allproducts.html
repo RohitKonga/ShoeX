@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <link rel="stylesheet" href="allproducts.css"/>
+    <title>Products</title>
+</head>
+<body>
+  <div class="scrollable-content">
+<!-- Include Header -->
+<div id="header-container"></div>
+
+<main class="product-page">
+  <div>
+    <h1>All Products</h1>
+    <section class="sidebar">
+        <h3>Browse by</h3>
+        <ul>
+            <li><a href="#">Mens Collection</a></li>
+            <li><a href="#">Womens Collection</a></li>
+            <li><a href="#">Kids Collection</a></li>
+            <li><a href="#">Best Sellers</a></li>
+        </ul>
+
+        <h3>Filter by</h3>
+        <label for="price">Price</label>
+        <input type="range" id="price" name="price" min="50" max="200" value="200">
+        <div class="price-labels">
+            <span>₹50</span>
+            <span>              ₹1000</span>
+        </div>
+    </section>
+  </div>
+    <section class="product-list">
+      <div class="sort-section">
+        <label for="sort">Sort By:</label>
+        <select id="sort">
+            <option value="recommended">Recommended</option>
+            <option value="newest">Newest</option>
+            <option value="priceLowHigh">Price (Low to High)</option>
+            <option value="priceHighLow">Price (High to Low)</option>
+            <option value="nameAZ">Name (A-Z)</option>
+            <option value="nameZA">Name (Z-A)</option>
+        </select>
+    </div>
+    
+
+        <!-- Product Cards -->
+        <div class="product-grid">
+          <div class="product-card">
+              <div class="product-image">
+                  <img src="images/shoe1.jpg" alt="Killer Navy Walking Shoes">
+                  <div class="wishlist-icon">♥</div>
+              </div>
+              <div class="product-info">
+                  <h3>KILLER</h3>
+                  <p class="product-name">Dunk Low Next Nature "White/Black" sneakers</p>
+                  <div class="price-section">
+                      <span class="current-price">₹999</span>
+                      <span class="original-price">₹1,999</span>
+                      <span class="discount">50% off</span>
+                  </div>
+                  <p class="delivery">Free delivery</p>
+                  <button class="add-to-cart">Add to Cart</button>
+              </div>
+          </div>
+      
+          <div class="product-card">
+              <div class="product-image">
+                  <img src="images/shoe2.jpg" alt="Killer Navy Walking Shoes">
+                  <div class="wishlist-icon">♥</div>
+              </div>
+              <div class="product-info">
+                  <h3>NIKE</h3>
+                  <p class="product-name">Low Cacao Wow Sneakers Lying on Satin Fabric</p>
+                  <div class="price-section">
+                      <span class="current-price">₹1299</span>
+                      <span class="original-price">₹1,999</span>
+                      <span class="discount">40% off</span>
+                  </div>
+                  <p class="delivery">Free delivery</p>
+                  <button class="add-to-cart">Add to Cart</button>
+              </div>
+          </div>
+      
+          <div class="product-card">
+              <div class="product-image">
+                  <img src="images/shoe3.jpg" alt="Killer Navy Walking Shoes">
+                  <div class="wishlist-icon">♥</div>
+              </div>
+              <div class="product-info">
+                  <h3>ADIDAS</h3>
+                  <p class="product-name">Air Jordan Sneakers on Pavement Sneakers</p>
+                  <div class="price-section">
+                      <span class="current-price">₹1899</span>
+                      <span class="original-price">₹1,999</span>
+                      <span class="discount">10% off</span>
+                  </div>
+                  <p class="delivery">Free delivery</p>
+                  <button class="add-to-cart">Add to Cart</button>
+              </div>
+          </div>
+      
+          <div class="product-card">
+              <div class="product-image">
+                  <img src="images/shoe4.jpg" alt="Killer Navy Walking Shoes">
+                  <div class="wishlist-icon">♥</div>
+              </div>
+              <div class="product-info">
+                  <h3>ASIAN</h3>
+                  <p class="product-name">Court Vision Low Premium Lace-Up Sneakers</p>
+                  <div class="price-section">
+                      <span class="current-price">₹699</span>
+                      <span class="original-price">₹1,999</span>
+                      <span class="discount">70% off</span>
+                  </div>
+                  <p class="delivery">Free delivery</p>
+                  <button class="add-to-cart">Add to Cart</button>
+              </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+                <img src="images/shoe5.jpg" alt="Killer Navy Walking Shoes">
+                <div class="wishlist-icon">♥</div>
+            </div>
+            <div class="product-info">
+                <h3>KILLER</h3>
+                <p class="product-name">Dunk Low Next Nature "White/Black" sneakers</p>
+                <div class="price-section">
+                    <span class="current-price">₹595</span>
+                    <span class="original-price">₹1,999</span>
+                    <span class="discount">70% off</span>
+                </div>
+                <p class="delivery">Free delivery</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/shoe6.jpg" alt="Killer Navy Walking Shoes">
+                <div class="wishlist-icon">♥</div>
+            </div>
+            <div class="product-info">
+                <h3>NIKE</h3>
+                <p class="product-name">Low Cacao Wow Sneakers Lying on Satin Fabric</p>
+                <div class="price-section">
+                    <span class="current-price">₹595</span>
+                    <span class="original-price">₹1,999</span>
+                    <span class="discount">70% off</span>
+                </div>
+                <p class="delivery">Free delivery</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/shoe7.jpg" alt="Killer Navy Walking Shoes">
+                <div class="wishlist-icon">♥</div>
+            </div>
+            <div class="product-info">
+                <h3>ADIDAS</h3>
+                <p class="product-name">Air Jordan Sneakers on Pavement Sneakers</p>
+                <div class="price-section">
+                    <span class="current-price">₹595</span>
+                    <span class="original-price">₹1,999</span>
+                    <span class="discount">70% off</span>
+                </div>
+                <p class="delivery">Free delivery</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+    <div class="product-card">
+        <div class="product-image">
+            <img src="images/shoe16.jpg" alt="Killer Navy Walking Shoes">
+            <div class="wishlist-icon">♥</div>
+        </div>
+        <div class="product-info">
+            <h3>ASIAN</h3>
+            <p class="product-name">Court Vision Low Premium Lace-Up Sneakers</p>
+            <div class="price-section">
+                <span class="current-price">₹595</span>
+                <span class="original-price">₹1,999</span>
+                <span class="discount">70% off</span>
+            </div>
+            <p class="delivery">Free delivery</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+      </div>
+    </section>
+</main>
+
+<script>
+    // Load Header
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header-container').innerHTML = data;
+        });
+</script>
+
+<footer class="footer">
+  <div class="footer-left">
+      <h1 class="logo">ShoeX.in</h1>
+      <p>Your one-stop destination for premium footwear and accessories.</p>
+      <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+  </div>
+
+  <div class="footer-center">
+      <div class="footer-menu">
+          <div class="footer-column">
+              <h3>PRODUCTS</h3>
+              <ul>
+                  <li><a href="#">Footwear</a></li>
+                  <li><a href="#">Clothing</a></li>
+                  <li><a href="#">Accessories</a></li>
+                  <li><a href="#">Outlet-Sale</a></li>
+                  <li><a href="#">New Arrivals</a></li>
+                  <li><a href="#">Flat 50% Off!</a></li>
+              </ul>
+          </div>
+          <div class="footer-column">
+              <h3>SPORTS</h3>
+              <ul>
+                  <li><a href="#">Cricket</a></li>
+                  <li><a href="#">Running</a></li>
+                  <li><a href="#">Football</a></li>
+                  <li><a href="#">Gym/Training</a></li>
+                  <li><a href="#">Tennis</a></li>
+                  <li><a href="#">Outdoor</a></li>
+                  <li><a href="#">Basketball</a></li>
+                  <li><a href="#">Swimming</a></li>
+                  <li><a href="#">Skateboarding</a></li>
+                  <br/>
+              </ul>
+          </div>
+          <div class="footer-column">
+              <h3>COLLECTIONS</h3>
+              <ul>
+                  <li><a href="#">Ultraboost</a></li>
+                  <li><a href="#">Superstar</a></li>
+                  <li><a href="#">NMD</a></li>
+                  <li><a href="#">Stan Smith</a></li>
+                  <li><a href="#">Sustainability</a></li>
+                  <li><a href="#">Predator</a></li>
+                  <li><a href="#">Parley</a></li>
+              </ul>
+          </div>
+          <div class="footer-column">
+              <h3>SUPPORT</h3>
+              <ul>
+                  <li><a href="#">Help</a></li>
+                  <li><a href="#">Customer Services</a></li>
+                  <li><a href="#">Returns & Exchanges</a></li>
+                  <li><a href="#">Shipping</a></li>
+                  <li><a href="#">Order Tracker</a></li>
+                  <li><a href="#">Store Finder</a></li>
+              </ul>
+          </div>
+          <div class="footer-column">
+              <h3>COMPANY INFO</h3>
+              <ul>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Adidas Stories</a></li>
+                  <li><a href="#">Adidas Apps</a></li>
+                  <li><a href="#">Entity Details</a></li>
+                  <li><a href="#">Press</a></li>
+                  <li><a href="#">Careers</a></li>
+              </ul>
+          </div>
+      </div>
+  </div>
+
+  <!-- Copyright Section -->
+  <div class="footer-bottom">
+      <p>© 2025 ShoeX.in, Inc. All rights reserved.</p>
+  </div>
+</footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShoeX</title>
+    <link rel="stylesheet" href="shoex.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div id="header-container"></div>
+
+    <script>
+        // Load header.html dynamically
+        fetch('header.html')                                                                                                        
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+    </script>
+    
+<section class="hero">
+    <div class="hero-content">
+        <h1>Discover the Ultimate Comfort</h1>
+        <p>Step into the future with our latest collection of performance-driven sneakers designed for all-day comfort.</p>
+        <button class="shop-now" onclick="document.location='allproducts.html'">Shop Now</button>
+    </div>
+    <div class="hero-image">
+        <img src="images/shoe.png" alt="Shoe Image">
+    </div>  
+</section>
+
+<!--Categories-->
+<h2 class="cat">Categories</h2>
+<section class="category-section">   
+    <div class="category-card">
+        <img src="images/men.jpg" alt="Men Shoes">
+        <h2>Men</h2>
+        <button class="shop-now">Shop Now</button>
+    </div>
+
+    <div class="category-card">
+        <img src="images/women.jpg" alt="Women Shoes">
+        <h2>Women</h2>
+        <button class="shop-now">Shop Now</button>
+    </div>
+
+    <div class="category-card">
+        <img src="images/kids.jpg" alt="Kids Shoes">
+        <h2>Kids</h2>
+        <button class="shop-now">Shop Now</button>
+    </div>
+</section>
+
+<!--Featured Products-->
+<section class="featured-products">
+    <h2>Featured Products</h2>
+    <div class="product-grid">
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/shoe1.jpg" alt="Killer Navy Walking Shoes">
+                <div class="wishlist-icon">♥</div>
+            </div>
+            <div class="product-info">
+                <h3>KILLER</h3>
+                <p class="product-name">Dunk Low Next Nature "White/Black" sneakers</p>
+        
+                <div class="price-section">
+                    <span class="current-price">₹595</span>
+                    <span class="original-price">₹1,999</span>
+                    <span class="discount">70% off</span>
+                </div>
+        
+                <p class="delivery">Free delivery</p>
+        
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/shoe2.jpg" alt="Killer Navy Walking Shoes">
+                <div class="wishlist-icon">♥</div>
+            </div>
+            <div class="product-info">
+                <h3>NIKE</h3>
+                <p class="product-name">Low Cacao Wow Sneakers Lying on Satin Fabric</p>
+        
+                <div class="price-section">
+                    <span class="current-price">₹595</span>
+                    <span class="original-price">₹1,999</span>
+                    <span class="discount">70% off</span>
+                </div>
+        
+                <p class="delivery">Free delivery</p>
+        
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/shoe3.jpg" alt="Killer Navy Walking Shoes">
+                <div class="wishlist-icon">♥</div>
+            </div>
+            <div class="product-info">
+                <h3>ADIDAS</h3>
+                <p class="product-name">Air Jordan Sneakers on Pavement Sneakers</p>
+        
+                <div class="price-section">
+                    <span class="current-price">₹595</span>
+                    <span class="original-price">₹1,999</span>
+                    <span class="discount">70% off</span>
+                </div>
+        
+                <p class="delivery">Free delivery</p>
+        
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/shoe4.jpg" alt="Killer Navy Walking Shoes">
+                <div class="wishlist-icon">♥</div>
+            </div>
+            <div class="product-info">
+                <h3>ASIAN</h3>
+                <p class="product-name">Court Vision Low Premium Lace-Up Sneakers </p>
+        
+                <div class="price-section">
+                    <span class="current-price">₹595</span>
+                    <span class="original-price">₹1,999</span>
+                    <span class="discount">70% off</span>
+                </div>
+        
+                <p class="delivery">Free delivery</p>
+        
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+<!--What our Customer Says-->
+<section class="testimonials">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonial-slider">
+        <div class="testimonial">
+            <div class="testimonial-header">
+                <img src="images/john.jpg" alt="John D." class="testimonial-img">
+                <div>
+                    <h3>John D.</h3>
+                    <div class="stars">★★★★★</div>
+                </div>
+            </div>
+            <p>
+                "I've purchased many shoes over the years, but these are by far the most comfortable ones I've ever owned. 
+                I can walk in them all day without any discomfort. The design is stylish and modern, and I receive compliments 
+                every time I wear them."
+            </p>
+        </div>
+
+        <div class="testimonial">
+            <div class="testimonial-header">
+                <img src="images/sarah.jpg" alt="Sarah L." class="testimonial-img">
+                <div>
+                    <h3>Sarah L.</h3>
+                    <div class="stars">★★★★☆</div>
+                </div>
+            </div>
+            <p>
+                "The attention to detail and quality of these shoes blew me away. The fit is just perfect, and I love how lightweight 
+                they are. I wear them to work and casual outings, and they never fail to impress, The attention to detail and quality of these shoes blew me away. The fit is just perfect, and I love how lightweight 
+                they are. I wear them to work and casual outings, and they never fail to impress."
+            </p>
+        </div>
+
+        <div class="testimonial">
+            <div class="testimonial-header">
+                <img src="images/michael.jpg" alt="Michael K." class="testimonial-img">
+                <div>
+                    <h3>Michael K.</h3>
+                    <div class="stars">★★★★★</div>
+                </div>
+            </div>
+            <p>
+                "These shoes exceeded my expectations! From the moment I put them on, I could tell they were built to last. 
+                The craftsmanship is superb, and the materials feel premium, These shoes exceeded my expectations! From the moment I put them on, I could tell they were built to last. 
+                The craftsmanship is superb, and the materials feel premium"
+            </p>
+        </div>
+
+        <div class="testimonial">
+            <div class="testimonial-header">
+                <img src="images/priya.jpg" alt="Priya S." class="testimonial-img">
+                <div>
+                    <h3>Priya S.</h3>
+                    <div class="stars">★★★★☆</div>
+                </div>
+            </div>
+            <p>
+                "I was skeptical at first, but after receiving my shoes, I was beyond impressed. The delivery was quick, and the shoes 
+                fit perfectly. They are now my go-to footwear for any occasion, I was skeptical at first, but after receiving my shoes, I was beyond impressed. The delivery was quick, and the shoes 
+                fit perfectly. They are now my go-to footwear for any occasion."
+            </p>
+        </div>
+
+        <div class="testimonial">
+            <div class="testimonial-header">
+                <img src="images/sarah.jpg" alt="Arjun M." class="testimonial-img">
+                <div>
+                    <h3>Arjun M.</h3>
+                    <div class="stars">★★★★★</div>
+                </div>
+            </div>
+            <p>
+                "Fantastic experience from start to finish! The ordering process was smooth, and the shoes arrived in perfect condition. 
+                They are incredibly comfortable, even after wearing them for long hours, Fantastic experience from start to finish! The ordering process was smooth, and the shoes arrived in perfect condition. 
+                They are incredibly comfortable, even after wearing them for long hours."
+            </p>
+        </div>
+
+        <div class="testimonial">
+            <div class="testimonial-header">
+                <img src="images/john.jpg" alt="Lisa R." class="testimonial-img">
+                <div>
+                    <h3>Lisa R.</h3>
+                    <div class="stars">★★★★☆</div>
+                </div>
+            </div>
+            <p>
+                "The shoes are amazing! I love how versatile they are—I can pair them with jeans, dresses, and even formal outfits. 
+                These are definitely my new favorite pair of shoes!"
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!--Email-->
+<section class="newsletter">
+    <h2>Stay Updated</h2>
+    <p>Subscribe for exclusive deals & updates.</p>
+    <input type="email" placeholder="Enter your email"><br/>
+    <button>Subscribe</button>
+</section>
+
+<!-- Footer Section -->
+<div id="footer-container"></div>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            });
+    </script>
+</body>
+</html>

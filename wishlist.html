@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist - ShoeX</title>
+    <link rel="stylesheet" href="nike.css">
+    <link rel="stylesheet" href="wishlist.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <div class="wishlist-container">
+        <h2>My Wishlist</h2>
+        <div class="wishlist-content">
+            <div class="wishlist-items">
+                <div class="wishlist-item">
+                    <div class="item-image">
+                        <img src="images/shoe2.jpg" alt="Nike Air Max">
+                    </div>
+                    <div class="item-details">
+                        <h3>Nike Air Max</h3>
+                        <p class="item-size">Size: 9</p>
+                        <p class="item-color">Color: Black/White</p>
+                        <div class="item-price">
+                            <span class="current-price">$129.99</span>
+                            <span class="original-price">$149.99</span>
+                            <span class="discount">13% OFF</span>
+                        </div>
+                    </div>
+                    <div class="item-actions">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="remove-item">
+                            <i class="fas fa-trash"></i> Remove from Wishlist
+                        </button>
+                    </div>
+                </div>
+
+                <div class="wishlist-item">
+                    <div class="item-image">
+                        <img src="images/shoe3.jpg" alt="Nike React">
+                    </div>
+                    <div class="item-details">
+                        <h3>Nike React</h3>
+                        <p class="item-size">Size: 10</p>
+                        <p class="item-color">Color: Blue/White</p>
+                        <div class="item-price">
+                            <span class="current-price">$119.99</span>
+                            <span class="original-price">$139.99</span>
+                            <span class="discount">14% OFF</span>
+                        </div>
+                    </div>
+                    <div class="item-actions">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="remove-item">
+                            <i class="fas fa-trash"></i> Remove from Wishlist
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Include header
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+
+        // Wishlist functionality
+        document.querySelectorAll('.remove-item').forEach(button => {
+            button.addEventListener('click', function() {
+                const wishlistItem = this.closest('.wishlist-item');
+                wishlistItem.remove();
+                updateWishlistCount();
+            });
+        });
+
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', function() {
+                const wishlistItem = this.closest('.wishlist-item');
+                const itemName = wishlistItem.querySelector('h3').textContent;
+                alert(`${itemName} added to cart!`);
+            });
+        });
+
+        function updateWishlistCount() {
+            const count = document.querySelectorAll('.wishlist-item').length;
+            document.querySelector('.wishlist-count').textContent = count;
+        }
+    </script>
+</body>
+</html>

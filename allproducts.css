@@ -1,0 +1,371 @@
+/* Hide scrollbar while keeping scroll functionality */
+html, body {
+  overflow: hidden; /* Hide default scrollbars */
+}
+
+/* Create a custom scroll area with hidden scrollbar */
+.scrollable-content {
+  overflow-y: scroll; /* Allow vertical scrolling */
+  height: 100vh; /* Full viewport height */
+  -ms-overflow-style: none; /* Hide scrollbar in IE/Edge */
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+}
+
+/* Hide scrollbar for Webkit browsers (Chrome, Safari) */
+.scrollable-content::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* Product Page Layout */
+.product-page {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  padding-top: 100px;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  max-width: 300px;         /* Limit sidebar width */
+  flex-shrink: 0;           /* Prevent shrinking */
+}
+
+/* Browse by Section */
+.sidebar h3 {
+  margin-top: 0;            /* Remove default margin */
+  margin-bottom: 1rem;      /* Space below headings */
+  font-size: 1.5rem;        /* Slightly larger */
+}
+
+/* Sidebar Links */
+.sidebar ul {
+  list-style: none;         /* Remove bullet points */
+  padding: 0;               /* Remove padding */
+}
+
+.sidebar ul li {
+  margin-bottom: 0.8rem;    /* Add space between links */
+}
+
+.sidebar a {
+  text-decoration: none;    /* Remove underlines */
+  color: #000;              /* Darker links */
+  font-size: 1rem;          /* Consistent size */
+}
+
+/* Filter Section */
+.sidebar label {
+  display: block;           /* Place label on new line */
+  margin-bottom: 0.5rem;    /* Space below label */
+  font-weight: bold;        /* Make label bold */
+}
+
+/* Range Slider */
+.sidebar input[type="range"] {
+  width: 100%;              /* Full width */
+  margin: 1rem 0;           /* Space above & below */
+}
+
+/* Product List Styling */
+.product-list {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Product Header */
+.product-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+/* Product Grid Layout */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  
+}
+
+/* Product Card Styling */
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+}
+
+/* Image Styling */
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Main Product Card */
+.product-card {
+  width: 320px; /* Card width */
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  justify-content: space-between;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+/* Image Section */
+.product-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.product-image img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover; /* Maintain image aspect ratio */
+  border-radius: 8px;    
+  transition: transform 0.4s ease;
+}
+
+.product-image:hover {
+  transform: scale(1.08); /* Zoom effect */
+}
+
+/* Wishlist Icon */
+.wishlist-icon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: #555;
+  font-size: 28px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.wishlist-icon:hover {
+  color: red;
+}
+
+/* Product Info Section */
+.product-info h3 {
+  margin: 15px 0 10px;
+  font-size: 14px;
+  color: #555;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.product-name {
+  font-size: 16px;
+  font-weight: 500;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+/* Price Section */
+.price-section {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.current-price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #222;
+}
+
+.original-price {
+  font-size: 14px;
+  color: #777;
+  text-decoration: line-through;
+}
+
+.discount {
+  font-size: 14px;
+  font-weight: bold;
+  color: #2ba84a; /* Green discount */
+}
+
+/* Delivery Info */
+.delivery {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+/* Add to Cart Button */
+.add-to-cart {
+  background: black;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.add-to-cart:hover {
+  background: white;
+  border: solid black;
+  color: black;
+  font-weight: bolder;
+}
+
+
+.sort-section {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.sort-section label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.sort-section select {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
+/* Footer Container */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: #333;
+  color: white;
+  padding: 50px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+/* Left Section (Logo & Description) */
+.footer-left {
+  flex: 1;
+  max-width: 250px;
+}
+
+.logo {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.footer-left p {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+/* Social Icons */
+.social-icons a {
+  margin-right: 15px;
+  font-size: 24px;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+
+/* Center Section (Multi-Column Menu) */
+.footer-center {
+  flex: 2;
+  text-align: center;
+}
+
+.footer-menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px; /* Equal spacing */
+  max-width: 1000px;
+  margin: auto;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 150px;
+}
+
+.footer-column h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #ff7e5f;
+}
+
+/* Right Section (App Store Images) */
+.footer-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.app-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.store-img {
+  width: 180px;
+  margin-bottom: 10px;
+}
+
+/* Footer Bottom (Copyright) */
+.footer-bottom {
+  width: 100%;
+  text-align: center;
+  padding: 15px 0;
+  background: #222;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.footer-bottom p {
+  color: #aaa;
+  font-size: 14px;
+}

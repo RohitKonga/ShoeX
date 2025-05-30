@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Nike Store</title>
+    <link rel="stylesheet" href="nike.css">
+    <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div id="header-container"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+    </script>
+
+    <div class="product-detail-container">
+        <div class="product-images">
+            <div class="main-image">
+                <img src="images/shoe2.jpg" alt="Nike Air Max" id="mainImage">
+            </div>
+            <div class="thumbnail-images">
+                <img src="images/shoe2.jpg" alt="Nike Air Max" class="thumbnail active" onclick="changeImage(this.src)">
+                <img src="images/shoe3.jpg" alt="Nike Air Max" class="thumbnail" onclick="changeImage(this.src)">
+                <img src="images/shoe4.jpg" alt="Nike Air Max" class="thumbnail" onclick="changeImage(this.src)">
+                <img src="images/shoe5.jpg" alt="Nike Air Max" class="thumbnail" onclick="changeImage(this.src)">
+            </div>
+        </div>
+
+        <div class="product-info">
+            <h1 class="product-title">Nike Air Max 270 React</h1>
+            <div class="product-rating">
+                <i class="fas fa-star"></i> 
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(4.5/5)</span>
+            </div>
+            
+            <div class="price-section">
+                <span class="current-price">₹1,999</span>
+                <span class="original-price">₹2,999</span>
+                <span class="discount">33% off</span>
+            </div>
+
+            <div class="size-options">
+                <h3>Select Size:</h3>
+                <div class="size-buttons">
+                    <button class="size-btn active">7</button>
+                    <button class="size-btn">8</button>
+                    <button class="size-btn">9</button>
+                    <button class="size-btn">10</button>
+                </div>
+            </div>
+
+            <div class="product-actions">
+                <div class="primary-actions">
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                    <button class="buy-now-btn">Buy Now</button>
+                </div>
+                <button class="wishlist-btn"><i class="far fa-heart"></i> Save to Wishlist</button>
+            </div>
+
+            <div class="product-description">
+                <h3>Product Description</h3>
+                <p>The Nike Air Max 270 React features a large Air unit for maximum cushioning and comfort. The upper is made from breathable mesh material with synthetic overlays for support. The React foam midsole provides responsive cushioning, while the rubber outsole offers excellent traction.</p>
+            </div>
+
+            <div class="product-features">
+                <h3>Key Features</h3>
+                <ul>
+                    <li><i class="fas fa-check"></i> Large Air unit for maximum cushioning</li>
+                    <li><i class="fas fa-check"></i> Breathable mesh upper</li>
+                    <li><i class="fas fa-check"></i> React foam midsole</li>
+                    <li><i class="fas fa-check"></i> Rubber outsole for traction</li>
+                </ul>
+            </div>
+
+            <div class="product-offers">
+                <h3>Special Offers</h3>
+                <ul>
+                    <li><i class="fas fa-gift"></i> Free delivery on orders above ₹2,999</li>
+                    <li><i class="fas fa-undo"></i> 30 days easy returns</li>
+                    <li><i class="fas fa-shield-alt"></i> 1 year warranty</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="testimonials">
+        <h3>Customer Reviews</h3>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <i class="fas fa-quote-left"></i>
+                    <p>"The Nike Air Max 270 React is incredibly comfortable! The cushioning is perfect for long walks and the design is sleek."</p>
+                </div>
+                <div class="testimonial-author">
+                    <img src="images/user1.jpg" alt="User 1">
+                    <div class="author-info">
+                        <h4>Rahul Sharma</h4>
+                        <p>Verified Buyer</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <i class="fas fa-quote-left"></i>
+                    <p>"Best running shoes I've ever owned. The React foam provides excellent energy return and the Air unit gives amazing cushioning."</p>
+                </div>
+                <div class="testimonial-author">
+                    <img src="images/user2.jpg" alt="User 2">
+                    <div class="author-info">
+                        <h4>Priya Patel</h4>
+                        <p>Verified Buyer</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <i class="fas fa-quote-left"></i>
+                    <p>"The quality is outstanding and the fit is perfect. Worth every penny spent!"</p>
+                </div>
+                <div class="testimonial-author">
+                    <img src="images/user3.jpg" alt="User 3">
+                    <div class="author-info">
+                        <h4>Amit Kumar</h4>
+                        <p>Verified Buyer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="recommended-products">
+        <h3>Recommended Products</h3>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/shoe1.jpg" alt="Nike Air Max">
+                    <div class="product-overlay">
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h4>Nike Air Max 270</h4>
+                    <div class="product-price">
+                        <span class="current-price">₹9,999</span>
+                        <span class="original-price">₹12,999</span>
+                        <span class="discount">-23%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/shoe2.jpg" alt="Nike React">
+                    <div class="product-overlay">
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h4>Nike React Infinity Run</h4>
+                    <div class="product-price">
+                        <span class="current-price">₹11,999</span>
+                        <span class="original-price">₹14,999</span>
+                        <span class="discount">-20%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/shoe3.jpg" alt="Nike Zoom">
+                    <div class="product-overlay">
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h4>Nike Zoom Fly 5</h4>
+                    <div class="product-price">
+                        <span class="current-price">₹13,999</span>
+                        <span class="original-price">₹16,999</span>
+                        <span class="discount">-18%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/shoe4.jpg" alt="Nike Free">
+                    <div class="product-overlay">
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h4>Nike Free Run 5.0</h4>
+                    <div class="product-price">
+                        <span class="current-price">₹8,999</span>
+                        <span class="original-price">₹11,999</span>
+                        <span class="discount">-25%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer-container"></div>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            });
+    </script>
+
+    <script>
+        function changeImage(src) {
+            document.getElementById('mainImage').src = src;
+            // Update active thumbnail
+            document.querySelectorAll('.thumbnail').forEach(thumb => {
+                thumb.classList.remove('active');
+                if(thumb.src === src) {
+                    thumb.classList.add('active');
+                }
+            });
+        }
+
+        // Color button selection
+        document.querySelectorAll('.color-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.color-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Size button selection
+        document.querySelectorAll('.size-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

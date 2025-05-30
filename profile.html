@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - ShoeX</title>
+    <link rel="stylesheet" href="nike.css">
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <div class="profile-container">
+        <div class="profile-content">
+            <div class="profile-sidebar">
+                <div class="profile-image">
+                    <img src="images/sarah.jpg" alt="Profile Picture">
+                    <button class="change-image">
+                        <i class="fas fa-camera"></i>
+                    </button>
+                </div>
+                <h2>John Doe</h2>
+                <p class="member-since">Member since 2023</p>
+                <nav class="profile-nav">
+                    <ul>
+                        <li class="active"><a href="#"><i class="fas fa-user"></i> Personal Info</a></li>
+                        <li><a href="orders.html"><i class="fas fa-shopping-bag"></i> Orders</a></li>
+                        <li><a href="addresses.html"><i class="fas fa-map-marker-alt"></i> Addresses</a></li>   
+                        <li><a href="wishlist.html"><i class="fas fa-heart"></i> Wishlist</a></li>
+                        <li><a href="login.html" class="logout-link"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="profile-main">
+                <div class="profile-section">
+                    <h3>Personal Information</h3>
+                    <form class="profile-form">
+                        <div class="form-group">
+                            <label for="fullname">Full Name</label>
+                            <input type="text" id="fullname" value="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" value="john.doe@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" value="+1 234 567 8900">
+                        </div>
+                        <div class="form-group">
+                            <label for="birthday">Date of Birth</label>
+                            <input type="date" id="birthday" value="1990-01-01">
+                        </div>
+                        <div class="form-group">
+                            <label>Gender</label>
+                            <div class="radio-group">
+                                <label>
+                                    <input type="radio" name="gender" value="male" checked>
+                                    Male
+                                </label>
+                                <label>
+                                    <input type="radio" name="gender" value="female">
+                                    Female
+                                </label>
+                                <label>
+                                    <input type="radio" name="gender" value="other">
+                                    Other
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="cancel-btn">Cancel</button>
+                            <button type="submit" class="save-btn">Save Changes</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="profile-section">
+                    <h3>Change Password</h3>
+                    <form class="password-form">
+                        <div class="form-group">
+                            <label for="current-password">Current Password</label>
+                            <input type="password" id="current-password">
+                        </div>
+                        <div class="form-group">
+                            <label for="new-password">New Password</label>
+                            <input type="password" id="new-password">
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm-password">Confirm New Password</label>
+                            <input type="password" id="confirm-password">
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="save-btn">Update Password</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // Include header and footer
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+
+        // Profile form handling
+        document.querySelector('.profile-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Profile updated successfully!');
+        });
+
+        document.querySelector('.password-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Password updated successfully!');
+        });
+
+        document.querySelector('.cancel-btn').addEventListener('click', function() {
+            window.location.reload();
+        });
+    </script>
+</body>
+</html>

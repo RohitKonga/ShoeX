@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Addresses - ShoeX</title>
+    <link rel="stylesheet" href="nike.css">
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <div class="profile-container">
+        <div class="profile-content">
+            <div class="profile-sidebar">
+                <div class="profile-image">
+                    <img src="images/sarah.jpg" alt="Profile Picture">
+                    <button class="change-image">
+                        <i class="fas fa-camera"></i>
+                    </button>
+                </div>
+                <h2>John Doe</h2>
+                <p class="member-since">Member since 2023</p>
+                <nav class="profile-nav">
+                    <ul>
+                        <li><a href="profile.html"><i class="fas fa-user"></i> Personal Info</a></li>
+                        <li><a href="orders.html"><i class="fas fa-shopping-bag"></i> Orders</a></li>
+                        <li class="active"><a href="addresses.html"><i class="fas fa-map-marker-alt"></i> Addresses</a></li>
+                        <li><a href="wishlist.html"><i class="fas fa-heart"></i> Wishlist</a></li>
+                        <li><a href="login.html" class="logout-link"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="profile-main">
+                <div class="addresses-header">
+                    <h3>My Addresses</h3>
+                    <button class="add-address-btn">
+                        <i class="fas fa-plus"></i> Add New Address
+                    </button>
+                </div>
+
+                <div class="addresses-grid">
+                    <div class="address-card">
+                        <div class="address-content">
+                            <h4>Home Address</h4>
+                            <p>John Doe</p>
+                            <p>123 Main Street</p>
+                            <p>Apartment 4B</p>
+                            <p>New York, NY 10001</p>
+                            <p>United States</p>
+                            <p>Phone: +1 234 567 8900</p>
+                        </div>
+                        <div class="address-actions">
+                            <button class="edit-address">
+                                <i class="fas fa-edit"></i> Edit
+                            </button>
+                            <button class="delete-address">
+                                <i class="fas fa-trash"></i> Delete
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="address-card">
+                        <div class="address-content">
+                            <h4>Office Address</h4>
+                            <p>John Doe</p>
+                            <p>456 Business Avenue</p>
+                            <p>Floor 5, Suite 502</p>
+                            <p>New York, NY 10002</p>
+                            <p>United States</p>
+                            <p>Phone: +1 234 567 8901</p>
+                        </div>
+                        <div class="address-actions">
+                            <button class="edit-address">
+                                <i class="fas fa-edit"></i> Edit
+                            </button>
+                            <button class="delete-address">
+                                <i class="fas fa-trash"></i> Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // Include header and footer
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+
+        // Address card functionality
+        document.querySelectorAll('.delete-address').forEach(button => {
+            button.addEventListener('click', function() {
+                if (confirm('Are you sure you want to delete this address?')) {
+                    this.closest('.address-card').remove();
+                }
+            });
+        });
+
+        document.querySelector('.add-address-btn').addEventListener('click', function() {
+            alert('Add new address functionality will be implemented here');
+        });
+    </script>
+</body>
+</html> 

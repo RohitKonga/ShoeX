@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike Store</title>
+    <link rel="stylesheet" href="nike.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div id="header-container"></div>
+    <script>
+        // Load header.html dynamically
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+    </script>
+
+    <div class="banner-container">
+        <input type="radio" name="slide" id="slide1" class="radio-controls" checked>
+        <input type="radio" name="slide" id="slide2" class="radio-controls">
+        <input type="radio" name="slide" id="slide3" class="radio-controls">
+
+        <div class="banner-slider">
+            <div class="banner-slide">
+                <img src="images/banner5.jpg" alt="Nike Air Max 270">
+            </div>
+            <div class="banner-slide">
+                <img src="images/banner5.jpg" alt="Nike Air Jordan 1">
+            </div>
+            <div class="banner-slide">
+                <img src="images/banner5.jpg" alt="Nike Air Force 1">
+            </div>
+        </div>
+
+        <div class="banner-nav">
+            <label for="slide1" class="nav-arrow">❮</label>
+            <label for="slide2" class="nav-arrow">❯</label>
+        </div>
+
+        <div class="banner-dots">
+            <label for="slide1" class="dot active"></label>
+            <label for="slide2" class="dot"></label>
+            <label for="slide3" class="dot"></label>
+        </div>
+    </div>
+
+    <section class="welcome-section">
+        <h1 class="welcome-text">Welcome to Nike Store</h1>
+    </section>
+
+    <section class="video-section">
+        <div class="video-container">
+            <video autoplay muted loop>
+                <source src="images/nike.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="featured-products section-padding">
+        <h2 class="section-title">Featured Products</h2>
+        <div class="product-grid section-container">
+            <div class="product-card card-hover">
+                <div class="product-image">
+                    <img src="images/shoe2.jpg" alt="Killer Navy Walking Shoes" class="image-hover">
+                    <div class="wishlist-icon">♥</div>
+                </div>
+                <div class="product-info">
+                    <h3>NIKE</h3>
+                    <p class="product-name">Low Cacao Wow Sneakers Lying on Satin Fabric</p>
+                    <div class="price-section">
+                        <span class="current-price">₹595</span>
+                        <span class="original-price">₹1,999</span>
+                        <span class="discount">70% off</span>
+                    </div>
+                    <p class="delivery">Free delivery</p>
+                    <button class="add-to-cart btn-hover">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card card-hover">
+                <div class="product-image">
+                    <img src="images/shoe3.jpg" alt="Killer Navy Walking Shoes" class="image-hover">
+                    <div class="wishlist-icon">♥</div>
+                </div>
+                <div class="product-info">
+                    <h3>ADIDAS</h3>
+                    <p class="product-name">Air Jordan Sneakers on Pavement Sneakers</p>
+                    <div class="price-section">
+                        <span class="current-price">₹595</span>
+                        <span class="original-price">₹1,999</span>
+                        <span class="discount">70% off</span>
+                    </div>
+                    <p class="delivery">Free delivery</p>
+                    <button class="add-to-cart btn-hover">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card card-hover">
+                <div class="product-image">
+                    <img src="images/shoe4.jpg" alt="Killer Navy Walking Shoes" class="image-hover">
+                    <div class="wishlist-icon">♥</div>
+                </div>
+                <div class="product-info">
+                    <h3>ASIAN</h3>
+                    <p class="product-name">Court Vision Low Premium Lace-Up Sneakers</p>
+                    <div class="price-section">
+                        <span class="current-price">₹595</span>
+                        <span class="original-price">₹1,999</span>
+                        <span class="discount">70% off</span>
+                    </div>
+                    <p class="delivery">Free delivery</p>
+                    <button class="add-to-cart btn-hover">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories section-padding">
+        <h2 class="section-title">Shop by Category</h2>
+        <div class="category-grid section-container">
+            <div class="category-card men card-hover">
+                <div class="category-content">
+                    <h3>Men's Collection</h3>
+                    <a href="#" class="category-link btn-hover">Shop Now</a>
+                </div>
+            </div>
+            <div class="category-card women card-hover">
+                <div class="category-content">
+                    <h3>Women's Collection</h3>
+                    <a href="#" class="category-link btn-hover">Shop Now</a>
+                </div>
+            </div>
+            <div class="category-card kids card-hover">
+                <div class="category-content">
+                    <h3>Kids Collection</h3>
+                    <a href="#" class="category-link btn-hover">Shop Now</a>
+                </div>
+            </div>
+            <div class="category-card sports card-hover">
+                <div class="category-content">
+                    <h3>Sports Collection</h3>
+                    <a href="#" class="category-link btn-hover">Shop Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Collections Section -->
+    <section class="featured-collections section-padding">
+        <h2 class="section-title">Featured Collections</h2>
+        <div class="collections-grid section-container">
+            <div class="collection-card card-hover">
+                <div class="collection-image">
+                    <img src="images/shoe5.jpg" alt="Summer Collection" class="image-hover">
+                </div>
+                <div class="collection-content">
+                    <h3>Summer Collection</h3>
+                    <p>Light and breathable sneakers for the summer season</p>
+                    <a href="#" class="collection-link btn-hover">Shop Now</a>
+                </div>
+            </div>
+
+            <div class="collection-card card-hover">
+                <div class="collection-image">
+                    <img src="images/shoe6.jpg" alt="Running Collection" class="image-hover">
+                </div>
+                <div class="collection-content">
+                    <h3>Running Collection</h3>
+                    <p>High-performance running shoes for athletes</p>
+                    <a href="#" class="collection-link btn-hover">Shop Now</a>
+                </div>
+            </div>
+
+            <div class="collection-card card-hover">
+                <div class="collection-image">
+                    <img src="images/shoe7.jpg" alt="Lifestyle Collection" class="image-hover">
+                </div>
+                <div class="collection-content">
+                    <h3>Lifestyle Collection</h3>
+                    <p>Stylish sneakers for everyday wear</p>
+                    <a href="#" class="collection-link btn-hover">Shop Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collaboration Section -->
+    <section class="collaboration-section section-padding">
+        <div class="section-container">
+            <div class="collab-content">
+                <h2 class="section-title">Nike x ShoeX Collaboration</h2>
+                <div class="collab-box card-hover">
+                    <div class="collab-image">
+                        <img src="images/shoe8.jpg" alt="ShoeX x Nike Collaboration" class="image-hover">
+                    </div>
+                    <div class="collab-details">
+                        <h3>Exclusive Collection</h3>
+                        <p>Get up to 30% off on your first purchase</p>
+                        <div class="promo-code">
+                            <span>Use Code:</span>
+                            <div class="code-box">SHOEX30</div>
+                        </div>
+                        <p class="terms">*Valid on first purchase only</p>
+                        <a href="#" class="collab-button btn-hover">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-container"></div>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
