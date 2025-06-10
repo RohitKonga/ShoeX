@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins';
+    color: #222;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: transparent;
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* Navigation menu */
+.nav-menu {
+    display: flex;
+    gap: 20px;
+    background: transparent;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px;
+    transition: 0.3s ease;
+
+}
+
+.nav-menu a:hover {
+    color: #4d4c4c;
+    transform: scale(1.1);
+}
+
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown button */
+.dropbtn {
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    width: max-content;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 100%;
+    white-space: nowrap;
+    padding: 10px 15px;
+    text-align: center;
+    /* Center items horizontally */
+    border-radius: 15px;
+
+}
+
+.nav-menu .dropdown .dropbtn {
+    margin-top: 0;
+    vertical-align: middle;
+    /* Aligns with other nav items */
+}
+
+.nav-menu {
+    align-items: center;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Show the dropdown menu when clicked (for mobile) */
+.dropdown.active .dropdown-content {
+    display: block;
+}
+
+/* Search Box */
+.search-container {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border-radius: 25px;
+    padding: 8px 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease-in-out;
+    width: 280px;
+    /* Adjust width */
+}
+
+.search-container input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+    padding: 5px;
+    background: transparent;
+}
+
+.search-container:hover {
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/*Icon*/
+.icon-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.icon-btn {
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.icon-btn:hover {
+    transform: scale(1.2);
+}
+
+.profile-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-dropdown .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    min-width: 150px;
+    border-radius: 15px;
+}
+
+.profile-dropdown .dropdown-menu a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #000000;
+}
+
+.profile-dropdown .dropdown-menu a:hover {
+    background-color: #f5f5f5;
+}
+
+/* Show dropdown on hover */
+.profile-dropdown:hover .dropdown-menu {
+    display: block;
+}

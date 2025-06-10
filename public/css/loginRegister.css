@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* Allows vertical alignment */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Background Blur Effect */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/images/secongmainimg.avif') no-repeat center center / cover;
+    filter: blur(3px);
+    z-index: -1;
+}
+
+/* Title Styling */
+.title {
+    font-size: 40px;
+    font-weight: 800;
+    color: black;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.container {
+    width: 400px;
+    background: white;
+    backdrop-filter: blur(30px);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: black;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 14px;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 25px;
+    outline: none;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.2);
+    color: black;
+    transition: 0.3s ease-in-out;
+    border: 2px solid black;
+}
+
+.input-box input::placeholder {
+    color: rgb(52, 52, 52);
+}
+
+.input-box input:focus {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 25px;
+    background: black;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: white;
+    color: black;
+    font-weight: 700;
+    border: 2px solid black;
+}
+
+.switch-form {
+    margin-top: 15px;
+    font-size: 14px;
+    color: black;
+}
+
+.switch-form span {
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.switch-form span:hover {
+    text-decoration: underline;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.text-danger {
+    color: red;
+}

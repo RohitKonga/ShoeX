@@ -1,0 +1,348 @@
+/* Hide scrollbar while keeping scroll functionality
+html,
+body {
+  overflow: hidden;
+  Hide default scrollbars
+}
+
+Create a custom scroll area with hidden scrollbar
+.scrollable-content {
+  overflow-y: scroll;
+  Allow vertical scrolling
+  height: 100vh;
+  Full viewport height
+  -ms-overflow-style: none;
+  Hide scrollbar in IE/Edge
+  scrollbar-width: none;
+  Hide scrollbar in Firefox
+}
+
+Hide scrollbar for Webkit browsers (Chrome, Safari)
+.scrollable-content::-webkit-scrollbar {
+  display: none;
+}
+
+
+Product Page Layout
+.product-page {
+  display: flex;
+  gap: 2rem;
+}
+
+
+Product List Styling
+.product-list {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+Product Header
+.product-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+
+Product Grid
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+Main Product Card
+.product-card {
+  width: 310px;
+  Card width
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  justify-content: space-between;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+Image Section
+.product-image {
+  position: relative;
+  overflow: hidden;
+  height: 300px;
+  border-radius: 8px;
+}
+
+.product-image img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  Maintain image aspect ratio
+  border-radius: 8px;
+  transition: transform 0.4s ease;
+}
+
+.product-image img:hover {
+  transform: scale(1.08);
+  Zoom effect
+}
+
+Wishlist Icon
+.wishlist-icon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: #555;
+  font-size: 28px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.wishlist-icon:hover {
+  color: red;
+}
+
+Product Info Section
+.product-info h3 {
+  margin: 15px 0 10px;
+  font-size: 14px;
+  color: #555;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.product-name {
+  font-size: 16px;
+  font-weight: 500;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+Price Section
+.price-section {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.current-price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #222;
+}
+
+.original-price {
+  font-size: 14px;
+  color: #777;
+  text-decoration: line-through;
+}
+
+.discount {
+  font-size: 14px;
+  font-weight: bold;
+  color: #2ba84a;
+  Green discount
+}
+
+.delivery {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+Add to Cart Button
+.add-to-cart {
+  background: black;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.add-to-cart:hover {
+  background: white;
+  border: solid black;
+  color: black;
+  font-weight: bolder;
+}
+
+
+.sort-section {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px;
+  align-items: center;
+}
+
+.sort-section label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.sort-section select {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+} */
+
+/* .featured-products {
+  padding: 50px;
+}
+
+.featured-products h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 32px;
+} */
+.sort-section {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px;
+  align-items: center;
+}
+
+.sort-section label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.sort-section select {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.product-grid {
+  display: grid;
+  margin: 50px 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+
+/* Main Product Card */
+.product-card {
+  width: 340px;
+  /* Card width */
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  justify-content: space-between;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+
+/* Image Section */
+.product-image {
+  position: relative;
+  overflow: hidden;
+  height: 300px;
+  border-radius: 8px;
+}
+
+.product-image img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  /* Maintain image aspect ratio */
+  border-radius: 8px;
+  transition: transform 0.4s ease;
+}
+
+.product-image img:hover {
+  transform: scale(1.08);
+  /* Zoom effect */
+}
+
+/* Wishlist Icon */
+.wishlist-icon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: #555;
+  font-size: 28px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.wishlist-icon:hover {
+  color: red;
+}
+
+/* Product Info Section */
+.product-info h3 {
+  margin: 15px 0 10px;
+  font-size: 14px;
+  color: #555;
+  font-weight: 600;
+  text-transform: uppercase;
+
+}
+
+.product-name {
+  font-size: 16px;
+  font-weight: 500;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+/* Price Section */
+.price-section {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.current-price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #222;
+}
+
+.original-price {
+  font-size: 14px;
+  color: #777;
+  text-decoration: line-through;
+}
+
+.discount {
+  font-size: 14px;
+  font-weight: bold;
+  color: #2ba84a;
+  /* Green discount */
+}
+
+/* Delivery Info */
+.delivery {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+/* Add to Cart Button */
+.add-to-cart {
+  background: black;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.add-to-cart:hover {
+  background: white;
+  border: solid black;
+  color: black;
+  font-weight: bolder;
+}
