@@ -1,8 +1,8 @@
 This is a fork of the group project originally created by @srinathmittakola. I contributed to the frontend-Whole Ui or the Project
-# shoeX
-# shoeX - Multi-Branded Shoe Store 🥿👟👞
 
-**shoeX** is a dynamic and responsive multi-brand online shoe store built for both users and admins. It allows customers to browse, search, and purchase shoes from top brands like Nike, Adidas, Puma, Bata, RedTape, Skechers, and Sparx. The site also provides an admin panel for managing inventory, orders, and customer data.
+# ShoeX - Multi-Branded Shoe Store 🥿👟👞
+
+**ShoeX** is a dynamic and responsive multi-brand online shoe store built for both users and admins. It allows customers to browse, search, and purchase shoes from top brands like Nike, Adidas, Puma, Bata, RedTape, Skechers, and Sparx. The site also provides an admin panel for managing inventory, orders, and customer data.
 
 ---
 
