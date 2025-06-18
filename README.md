@@ -1,3 +1,4 @@
+This is a fork of the group project originally created by @srinathmittakola. I contributed to the frontend-Whole Ui or the Project
 # shoeX
 # shoeX - Multi-Branded Shoe Store 🥿👟👞
 
